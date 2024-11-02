@@ -12,15 +12,25 @@
 
 :root {
   /* colors */
-  --background-color: white;
+  --background-color: #fff;
+  --background-color-black: #000;
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
+  --background-color-hf: #202020;
+  --text-color-hf: #ebebeb;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  --overlay-background-color: #eee;
+  --highlight-background-color: #ccc;
+  --brand-primary-color: #ffea00;
+  --opecity-color-42: #00000042;
+  --background-color-light: #ebebeb;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
+  /* --body-font-family: roboto, roboto-fallback, sans-serif; */
+    color: var(--textColor,#202020);
+  --body-font-family: ,"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */

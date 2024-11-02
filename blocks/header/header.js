@@ -71,6 +71,8 @@ function toggleAllNavSections(sections, expanded = false) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
+
+
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
@@ -162,5 +164,27 @@ export default async function decorate(block) {
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
+  const topBar = document.createElement('div');
+  topBar.classList.add('header-topbar');
+  block.prepend(topBar);
+  topBar.innerHTML = '<div style="background-color:black; color:white ;text-align:right;padding-right:15px">SIGN IN</div>';
   block.append(navWrapper);
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      navWrapper.classList.add('fixed-nav');
+    } else {
+      navWrapper.classList.remove('fixed-nav');
+    }
+  });
+
+
+
 }
+
+
+
+
+
+
+
+
