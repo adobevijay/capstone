@@ -167,8 +167,9 @@ export default async function decorate(block) {
   const topBar = document.createElement('div');
   topBar.classList.add('header-topbar');
   block.prepend(topBar);
-  topBar.innerHTML = '<div style="background-color:black; color:white ;text-align:right;padding-right:15px">SIGN IN</div>';
+  topBar.innerHTML = '<div style="background-color:black; color:white ;text-align:right;padding-right:12px;font-size:15px;">SIGN IN</div>';
   block.append(navWrapper);
+  
   window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
       navWrapper.classList.add('fixed-nav');
