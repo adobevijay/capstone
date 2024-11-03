@@ -26,7 +26,14 @@
   --brand-primary-color: #ffea00;
   --opecity-color-42: #00000042;
   --background-color-light: #ebebeb;
-
+  --color-black-100: #000;
+  --type-base-font-family: 'Source Sans Pro', roboto, roboto-fallback, sans-serif;
+  --type-body-2-default-font: normal normal 300 1.4rem/2rem
+  var(--type-base-font-family);
+  --type-body-2-default-letter-spacing: 0.04em;
+  --color-neutral-50: #fff;
+  --large-grid-layout: 1200px;
+  --body-font-size-xxs: 10px;
   /* fonts */
   --heading-font-family: "Asar", georgia, "Times New Roman", times, serif;
   --body-font-family: "Source Sans Pro", "Helvetica Neue", helvetica, arial, sans-serif;
