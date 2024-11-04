@@ -41,6 +41,7 @@
   --font-weight-bold: 600;
   
   /* body sizes */
+  --body-font-size-18: 18px;
   --body-font-size-m: 22px;
   --body-font-size-s: 19px;
   --body-font-size-sm: 14px;
@@ -254,6 +255,7 @@ main img {
   width: 100%;
 }
 
+
 /* sections */
 main > .section {
   margin: 40px 0;
@@ -287,6 +289,14 @@ main > .section:first-of-type {
   }
 }
 
+
+@media (width>1024px){
+  main:has(.section.magazine-image) {
+    display:flex;
+    flex-wrap:wrap
+  }
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {
@@ -294,3 +304,81 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+.section.magazine-image {
+  flex:0 0 100%;
+}
+.section.magazine-text{
+  flex: 0 0 66%;
+  padding-right:60px;
+  margin-left: -50px;
+}
+
+.default-content-wrapper .faqs:after {
+  content: '';
+  position: absolute;
+  left: 25%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background-color: rgb(220, 220, 9);
+} 
+
+
+.section.magazine-list.article-list-container {
+  position: absolute;
+  right: 0; 
+  top: 1000px; 
+  width: 20%;
+  max-width: 20%; 
+  height: 100vh; 
+  
+  margin: 0; 
+ 
+  background-color: #fff;
+}
+
+main > .section.magazine-text >.default-content-wrapper{
+ 
+
+  > h2{
+    font-family:'Times New Roman', Times, serif;
+    font-size:large;
+    font-weight: 550;
+    margin-left:5px;
+   
+  }
+  >p{
+    margin-left: 5px;
+    font-size: small;
+    font-weight: 100;
+    line-height:40px;
+  }
+  >p:nth-child(4){
+    text-align:left;
+    padding: 0 60px;
+    font-size: medium;
+    line-height: 25px;
+
+  }
+  >#clear-skies,#mythical-northern-lights,#the-front{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px; 
+  }
+  >#clear-skies:after,#mythical-northern-lights:after,#the-front:after{
+    content: '';
+    position: absolute;
+    left: 25%; 
+    transform: translateX(-50%); 
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background-color: rgb(220, 220, 9);
+  }
+
+}
+main > .section.magazine-image{
+  margin:-30px -10px;
+ }
