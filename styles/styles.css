@@ -41,6 +41,7 @@
   --font-weight-bold: 600;
   
   /* body sizes */
+  --body-font-size-16: 16px;
   --body-font-size-18: 18px;
   --body-font-size-m: 22px;
   --body-font-size-s: 19px;
@@ -382,3 +383,20 @@ main > .section.magazine-text >.default-content-wrapper{
 main > .section.magazine-image{
   margin:-30px -10px;
  }
+
+
+ .default-content-wrapper #current-adventures {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 25px;
+ }
+ #current-adventures:after {
+  content: '';
+  position: absolute;
+  left: 12%; 
+  transform: translateX(-50%); 
+  bottom: 10%;
+  width: 25%;
+  height: 2px;
+  background-color: rgb(220, 220, 9);
+  }
