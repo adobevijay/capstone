@@ -38,9 +38,11 @@
   --heading-font-family: "Asar", georgia, "Times New Roman", times, serif;
   --body-font-family: "Source Sans Pro", "Helvetica Neue", helvetica, arial, sans-serif;
   --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
+  --about-font-family:  "Arial, Helvetica, sans-serif"
   --font-weight-bold: 600;
   
   /* body sizes */
+  --body-font-size-15:15px;
   --body-font-size-16: 16px;
   --body-font-size-18: 18px;
   --body-font-size-m: 22px;
