@@ -3,18 +3,42 @@ import { loadFragment } from '../fragment/fragment.js';
 
 /**
  * loads and decorates the footer
- * @param {Element} block 
+ * @param {Element} block The footer block element
  */
+
+
+/*****        make current page nav item selected *****/
+function activeFooterNavItem()
+{
+  let currentPage = window.location.pathname.replace("/","");
+  const navWrapper=document.querySelector('footer .footer-top-bar ul');
+  const navItems=navWrapper.querySelectorAll('li');
+  navItems.forEach((item)=>
+  {
+      const itemTitle=item.querySelector('a').getAttribute('title').toLowerCase().replace(/\s+/g, '-');
+      if(itemTitle===currentPage)
+      {
+        item.closest('li').classList.add('active-page');
+      }
+  });
+}
+
+
+
+
 export default async function decorate(block) {
-  
+  // load footer as fragment
   const footerMeta = getMetadata('footer');
   const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
   const fragment = await loadFragment(footerPath);
 
- 
+  // decorate footer DOM
   block.textContent = '';
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  activeFooterNavItem();
+
 }
