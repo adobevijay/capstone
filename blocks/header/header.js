@@ -134,19 +134,7 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
   }
 
-  // const navSections = nav.querySelector('.nav-sections');
-  // if (navSections) {
-  //   navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
-  //     if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-  //     navSection.addEventListener('click', () => {
-  //       if (isDesktop.matches) {
-  //         const expanded = navSection.getAttribute('aria-expanded') === 'true';
-  //         toggleAllNavSections(navSections);
-  //         navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  //       }
-  //     });
-  //   });
-  // }
+ 
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
@@ -191,7 +179,7 @@ export default async function decorate(block) {
   const topBar = document.createElement('div');
   topBar.classList.add('header-topbar');
   block.prepend(topBar);
-  topBar.innerHTML = '<div style="background-color:black; color:white ;text-align:right;padding-right:12px;font-size:15px;">SIGN IN</div>';
+  topBar.innerHTML = '<div></div><div class="header-markets"><span>Sign In</span><span class="icon icon-flag-us"></span>EN-US<span class="header-chevron-down"></span></div>';
   block.append(navWrapper);
   
   window.addEventListener('scroll', () => {
